@@ -37,4 +37,13 @@ RSpec.describe Api::V1::AnimalsController, type: :controller do
     end
   end
 
+  describe 'DELETE /api/v1/animals/id' do
+    it 'Consegue excluir um animal e retornar status 204?' do
+      animal = Animal.last
+      delete :destroy, params: {id: animal.id}
+      expect(Animal.all).not_to include(animal)
+      expect(response).to have_http_status(204)
+    end
+  end
+
 end
