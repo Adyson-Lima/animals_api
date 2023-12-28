@@ -20,4 +20,12 @@ RSpec.describe Api::V1::AnimalsController, type: :controller do
     end
   end
 
+  describe 'POST /api/v1/animals' do
+    it 'Consegue criar um animal e retornar status 201?' do
+      post :create, params: {animal: {name: 'cavalo', size: 'grande porte'}, format: :json}
+      expect(response.body).to include_json(name: 'cavalo')
+      expect(response).to have_http_status(201)
+    end
+  end
+
 end
