@@ -1,10 +1,14 @@
 class Api::V1::AnimalsController < ApplicationController
 
-  # before_action :set_animal, only: %i[] # show update destroy
+  before_action :set_animal, only: %i[show] # show update destroy
 
   def index
     @animals = Animal.all 
     render json: @animals
+  end
+
+  def show
+    render json: @animal
   end
 
 private
