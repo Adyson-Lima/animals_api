@@ -12,7 +12,7 @@ RSpec.describe Animal, type: :model do
     end
 
     it 'size consegue ser preenchido?' do
-      @animal.size = ''
+      @animal.size = 'medio porte'
       expect(@animal.size).to eq('medio porte')
     end
 

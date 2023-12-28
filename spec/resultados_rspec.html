@@ -283,13 +283,13 @@ a {
   <dl style="margin-left: 0px;">
   <dt id="example_group_1" class="passed">Testes de verificação de pastas do projeto</dt>
     <script type="text/javascript">moveProgressBar('16.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta spec/models existe?</span><span class='duration'>0.02766s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">pasta spec/models existe?</span><span class='duration'>0.01914s</span></dd>
     <script type="text/javascript">moveProgressBar('33.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta spec/controllers existe?</span><span class='duration'>0.00046s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">pasta spec/controllers existe?</span><span class='duration'>0.00042s</span></dd>
     <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api existe?</span><span class='duration'>0.00036s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api existe?</span><span class='duration'>0.00027s</span></dd>
     <script type="text/javascript">moveProgressBar('66.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00030s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00024s</span></dd>
   </dl>
 </div>
 <div id="div_group_2" class="example_group passed">
@@ -301,35 +301,13 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">Testes de preenchimento do model Animal</dt>
     <script type="text/javascript">moveProgressBar('83.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.01128s</span></dd>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_3');</script>
-    <script type="text/javascript">makeRed('example_group_3');</script>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.01969s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">size consegue ser preenchido?</span>
-      <span class="duration">0.00552s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(@animal.size).to eq(&#39;medio porte&#39;)
-
-    expected: &quot;medio porte&quot;
-         got: &quot;&quot;
-
-    (compared using ==)
-  # ./spec/models/animal_spec.rb:16:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/models/animal_spec.rb:16:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">14</span>    it 'size consegue ser preenchido?' do
-<span class="linenum">15</span>      @animal.size = ''
-<span class="offending"><span class="linenum">16</span>      expect(@animal.size).to eq('medio porte')</span>
-<span class="linenum">17</span>    end
-<span class="linenum">18</span>
-<span class="linenum">19</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">size consegue ser preenchido?</span><span class='duration'>0.00097s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.07642 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "6 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.04401 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "6 examples, 0 failures";</script>
 </div>
 </div>
 </body>
