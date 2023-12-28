@@ -1,6 +1,6 @@
 class Api::V1::AnimalsController < ApplicationController
 
-  before_action :set_animal, only: %i[show] # show update destroy
+  before_action :set_animal, only: %i[show update] # show update destroy
 
   def index
     @animals = Animal.all 
@@ -15,6 +15,14 @@ class Api::V1::AnimalsController < ApplicationController
     @animal = Animal.new(animal_params)
     if @animal.save
       render json: @animal, status: :created, location: api_v1_animal_url(@animal)
+    else
+      render json: @animal.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @animal.update(animal_params)
+      render json: @animal
     else
       render json: @animal.errors, status: :unprocessable_entity
     end
