@@ -26,6 +26,11 @@ RSpec.describe Animal, type: :model do
       expect(@animal).to be_valid
     end
 
+    it 'objeto animal invalido com campos obrigatorios não preenchidos?' do
+      animal = Animal.new
+      expect(animal).to be_valid
+    end
+
   end
 
 end
