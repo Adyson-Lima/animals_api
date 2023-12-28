@@ -11,6 +11,15 @@ class Api::V1::AnimalsController < ApplicationController
     render json: @animal
   end
 
+  def create
+    @animal = Animal.new(animal_params)
+    if @animal.save
+      render json: @animal, status: :created, location: api_v1_animal_url(@animal)
+    else
+      render json: @animal.errors, status: :unprocessable_entity
+    end
+  end
+
 private
 
 def set_animal
