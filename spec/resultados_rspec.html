@@ -282,14 +282,14 @@ a {
 <div id="div_group_1" class="example_group passed">
   <dl style="margin-left: 0px;">
   <dt id="example_group_1" class="passed">Testes de verificação de pastas do projeto</dt>
-    <script type="text/javascript">moveProgressBar('16.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta spec/models existe?</span><span class='duration'>0.01914s</span></dd>
-    <script type="text/javascript">moveProgressBar('33.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta spec/controllers existe?</span><span class='duration'>0.00042s</span></dd>
-    <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api existe?</span><span class='duration'>0.00027s</span></dd>
-    <script type="text/javascript">moveProgressBar('66.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00024s</span></dd>
+    <script type="text/javascript">moveProgressBar('14.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">pasta spec/models existe?</span><span class='duration'>0.01781s</span></dd>
+    <script type="text/javascript">moveProgressBar('28.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">pasta spec/controllers existe?</span><span class='duration'>0.00043s</span></dd>
+    <script type="text/javascript">moveProgressBar('42.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api existe?</span><span class='duration'>0.00029s</span></dd>
+    <script type="text/javascript">moveProgressBar('57.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00028s</span></dd>
   </dl>
 </div>
 <div id="div_group_2" class="example_group passed">
@@ -300,14 +300,39 @@ a {
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">Testes de preenchimento do model Animal</dt>
-    <script type="text/javascript">moveProgressBar('83.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.01969s</span></dd>
-    <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">size consegue ser preenchido?</span><span class='duration'>0.00097s</span></dd>
+    <script type="text/javascript">moveProgressBar('71.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.01149s</span></dd>
+    <script type="text/javascript">moveProgressBar('85.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">size consegue ser preenchido?</span><span class='duration'>0.00083s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.04401 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "6 examples, 0 failures";</script>
+<div id="div_group_4" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_4" class="passed">Testes de validacao do model Animal</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_4');</script>
+    <script type="text/javascript">makeRed('example_group_4');</script>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">objeto animal valido com campos obrigatorios preenchidos?</span>
+      <span class="duration">1.64675s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: expect(@animal).to be_valid
+    expected #&lt;Animal id: nil, name: &quot;&quot;, size: &quot;&quot;, created_at: nil, updated_at: nil&gt; to be valid, but got errors: Name can&#39;t be blank, Size can&#39;t be blank
+  # ./spec/models/animal_spec.rb:26:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>./spec/models/animal_spec.rb:26:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">24</span>      @animal.name = ''
+<span class="linenum">25</span>      @animal.size = ''
+<span class="offending"><span class="linenum">26</span>      expect(@animal).to be_valid</span>
+<span class="linenum">27</span>    end
+<span class="linenum">28</span>
+<span class="linenum">29</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>1.68872 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "7 examples, 1 failure";</script>
 </div>
 </div>
 </body>
