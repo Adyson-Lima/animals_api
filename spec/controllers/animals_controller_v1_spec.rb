@@ -28,4 +28,13 @@ RSpec.describe Api::V1::AnimalsController, type: :controller do
     end
   end
 
+  describe 'PATCH /api/v1/animals/id' do
+    it 'Consegue atualizar um animal e retornar status 200?' do
+      animal = Animal.last
+      patch :update, params: {animal: {name: 'zebra', size: 'grande porte'}, id: animal.id}
+      expect(response.body).to include_json(name: 'zebra')
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
